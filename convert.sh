@@ -97,7 +97,8 @@ mkdir -p "$out"
 
 \ls "$in" | while read file
 do
-	node modules/removeTinyDots.js "$in/$file" "$out/$file"
+	node modules/removeTinyDots.js "$in/$file" "$out/$file" 1
+	node modules/removeTinyDots.js "$out/$file" "$out/$file" 1
 done
 
 #===========================================================
