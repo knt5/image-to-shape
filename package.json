@@ -1,0 +1,8 @@
+{
+  "name": "tools",
+  "author": "knt5",
+  "devDependencies": {
+    "canvas": "^1.4.0",
+    "glob": "^7.0.5"
+  }
+}
