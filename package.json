@@ -1,7 +1,7 @@
 {
-  "name": "tools",
+  "name": "image2shape",
   "author": "knt5",
-  "devDependencies": {
+  "dependencies": {
     "canvas": "^1.4.0",
     "glob": "^7.0.5"
   }
