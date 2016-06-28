@@ -59,7 +59,7 @@ done
 
 
 #===========================================================
-# blur
+# Blur
 
 in="works/002-resize"
 out="works/003-blur"
@@ -74,7 +74,7 @@ do
 done
 
 #===========================================================
-# binarize
+# Binarize
 
 in="works/003-blur"
 out="works/004-binarize"
@@ -88,7 +88,7 @@ do
 done
 
 #===========================================================
-# remove tiny noise
+# Remove tiny noise
 
 in="works/004-binarize"
 out="works/007-denoise"
@@ -101,7 +101,7 @@ do
 done
 
 #===========================================================
-# morph
+# Morph
 
 #in="works/007-denoise"
 in="works/004-binarize"
