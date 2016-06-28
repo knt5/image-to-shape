@@ -97,14 +97,13 @@ mkdir -p "$out"
 
 \ls "$in" | while read file
 do
-	echo convert "$in/$file" "$out/$file"
+	node modules/removeTinyDots.js "$in/$file" "$out/$file"
 done
 
 #===========================================================
 # Morph
 
-#in="works/007-denoise"
-in="works/004-binarize"
+in="works/007-denoise"
 out="works/008-morph"
 
 mkdir -p "$out"
