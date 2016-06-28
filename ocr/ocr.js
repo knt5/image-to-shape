@@ -4,9 +4,9 @@ const execSync = require('child_process').execSync;
 const glob = require('glob');
 
 // config
-const inDir = 'works/003-binarize';
-const outDir = 'works/005-no-chars';
-const ocrDir = 'works/004-ocr';
+const inDir = '../works/004-binarize';
+const outDir = '../works/006-no-chars';
+const ocrDir = '../works/005-ocr';
 
 // files
 const names = [];

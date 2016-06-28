@@ -24,7 +24,7 @@ done
 # Resize
 
 in="works/001-gray"
-out="works/001b-resize"
+out="works/002-resize"
 
 mkdir -p "$out"
 
@@ -61,8 +61,8 @@ done
 #===========================================================
 # blur
 
-in="works/001b-resize"
-out="works/002-blur"
+in="works/002-resize"
+out="works/003-blur"
 
 mkdir -p "$out"
 
@@ -76,8 +76,8 @@ done
 #===========================================================
 # binarize
 
-in="works/002-blur"
-out="works/003-binarize"
+in="works/003-blur"
+out="works/004-binarize"
 
 mkdir -p "$out"
 
@@ -88,15 +88,28 @@ do
 done
 
 #===========================================================
-# OCR
-in="works/001b-resize"
-out="works/004-ocr"
+# remove tiny noise
+
+in="works/004-binarize"
+out="works/007-denoise"
 
 mkdir -p "$out"
 
 \ls "$in" | while read file
 do
-	name=`basename "$file" .png`
-	tesseract "$in/$file" "$out/$name" -l jpn japanese.config makebox
-	mv "$out/$name".box "$out/$name".txt
+	echo convert "$in/$file" "$out/$file"
+done
+
+#===========================================================
+# morph
+
+#in="works/007-denoise"
+in="works/004-binarize"
+out="works/008-morph"
+
+mkdir -p "$out"
+
+\ls "$in" | while read file
+do
+	convert -morphology Erode Square:1.5 "$in/$file" "$out/$file"
 done
