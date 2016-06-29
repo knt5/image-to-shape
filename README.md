@@ -1,6 +1,6 @@
 # Image to shape converter
 
-A tool to convert raster images to vector data
+This is a raster images to vector data converter.
 
 ## Installation
 
