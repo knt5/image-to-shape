@@ -1,5 +1,5 @@
 {
-  "name": "image2shape",
+  "name": "image-to-shape",
   "author": "knt5",
   "dependencies": {
     "canvas": "^1.4.0",
