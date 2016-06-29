@@ -88,7 +88,7 @@ do
 done
 
 #===========================================================
-# Remove tiny noise
+# Remove noise
 
 in="works/004-binarize"
 out="works/007-denoise"
@@ -99,17 +99,6 @@ mkdir -p "$out"
 do
 	node modules/removeTinyDots.js "$in/$file" "$out/$file" 1
 	node modules/removeTinyDots.js "$out/$file" "$out/$file" 1
-done
-
-#===========================================================
-# Morph
-
-in="works/007-denoise"
-out="works/008-morph"
-
-mkdir -p "$out"
-
-\ls "$in" | while read file
-do
-	convert -morphology Erode Square:1.5 "$in/$file" "$out/$file"
+	
+	convert -morphology Open Square:1 "$out/$file" "$out/$file"
 done
