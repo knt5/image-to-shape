@@ -1,7 +1,5 @@
 const path = require('path');
 const fs = require('fs');
-const execSync = require('child_process').execSync;
-const glob = require('glob');
 
 // canvas
 const Canvas = require('canvas');
