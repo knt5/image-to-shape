@@ -1,5 +1,7 @@
 # Image to shape converter
 
+A tool to convert raster images to vector data
+
 ## Installation
 
 1. GDAL
