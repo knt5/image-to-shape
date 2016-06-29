@@ -1,8 +1,9 @@
 # Image to shape converter
 
-## Install
+## Installation
 
-GDAL and followings:
+1. GDAL
+1. Followings
 
 ```
 brew install imagemagick
