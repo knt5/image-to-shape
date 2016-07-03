@@ -39,3 +39,16 @@ mkdir -p "$out"
 do
 	node modules/cleanPolygons.js "$in/$file" "$out/$file"
 done
+
+#===========================================================
+# Counterclockwise
+
+in="works/203-cleaned"
+out="works/204-counterclockwise"
+
+mkdir -p "$out"
+
+\ls "$in" | while read file
+do
+	node modules/counterclockwise.js "$in/$file" "$out/$file"
+done
