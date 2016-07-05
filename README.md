@@ -1,10 +1,10 @@
 # Image to shape converter
 
-This is a raster images to vector data converter.
+A converter from raster images to vector shape data
 
 ## Installation
 
-1. GDAL
+1. GDAL framework
 1. Followings
 
 ```
